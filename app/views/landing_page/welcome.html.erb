@@ -1,0 +1,24 @@
+<%= javascript_pack_tag 'hello_react' %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First Fullstack Project</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <% @users.each do |user| %>
+    <div>
+      <%= user.email %>
+    </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

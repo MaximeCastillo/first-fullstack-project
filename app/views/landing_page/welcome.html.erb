@@ -1,5 +1,3 @@
-<%= javascript_pack_tag 'hello_react' %>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,12 +11,10 @@
 
   <body>
 
-    <% @users.each do |user| %>
-    <div>
-      <%= user.email %>
+    <div id="root">
     </div>
-    <% end %>
 
     <%= yield %>
   </body>
 </html>
+
